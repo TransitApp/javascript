@@ -1,3 +1,5 @@
+'use strict';
+
 // # Whitespace
 // Limit your lines to 105 characters
 function testMyStringLikeYouNeverTestedItBefore() {
