@@ -48,7 +48,15 @@ foreign name should be prefixed for disambiguation, or even both.
 
 ### The name should describe the content
 
-- An array of `thing` should be called just `things`.
+- An array should have a name that gives clues about its content.
+  ```javascript
+  // Bad.
+  const things = ['dog', 'cat', 'mouse'];
+
+  // Good.
+  const animals = ['dog', 'cat', 'mouse'];
+  ```
+
 - An object of `thing` indexed by some `key` should be called `thingByKey`.
   ```javascript
   // Bad.
@@ -88,11 +96,6 @@ foreign name should be prefixed for disambiguation, or even both.
   const stopSequenceAsString = '1';
   const stopSequenceAsInt = parseInt(stopSequenceAsString);
   ```
-
-As soon as you start to have different representations of the same thing in the same function, 
-disambiguation on the content should be done. For example:
-- `timestampAsMoment` vs `timestampAsString`
-- `stopSequenceAsString` vs `stopSequenceAsInt`
 
 With some reasonable limits, one shouldn't be afraid to have long variable name, and be more afraid
  of meaningless names. For example:
