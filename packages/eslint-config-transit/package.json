@@ -1,0 +1,46 @@
+{
+  "name": "eslint-config-transit",
+  "version": "0.0.1",
+  "description": "Transit's ESLint config",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/TransitApp/javascript.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "transit",
+    "javascript",
+    "styleguide"
+  ],
+  "author": "Thomas Lefebvre <thomas@transitapp.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TransitApp/javascript/issues"
+  },
+  "homepage": "https://github.com/TransitApp/javascript#readme",
+  "peerDependencies": {
+    "eslint": "^3.15.0"
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^11.1.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "ecmaFeatures": {}
+    },
+    "rules": {
+      "max-len": ["error", 105, 2]
+    }
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  }
+}
