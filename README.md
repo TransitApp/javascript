@@ -82,7 +82,7 @@ foreign name should be prefixed for disambiguation, or even both.
   ```javascript
   // Bad.
   let stopSequence = '1';
-  stopSequence = parseInt(2);
+  stopSequence = parseInt(stopSequence);
 
   // Good.
   const stopSequenceAsString = '1';
