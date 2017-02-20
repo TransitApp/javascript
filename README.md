@@ -18,7 +18,7 @@ Our styles are based on the excellent [javascript guide from Airbnb](https://git
   // Bad.
   const promise = Promise.resolve(true).then(Promise.resolve).then(Promise.resolve).then(Promise.resolve).then(Promise.resolve);
 
-  // Good
+  // Good.
   const promise = Promise.resolve()
     .then(Promise.resolve)
     .then(Promise.resolve)
@@ -29,31 +29,65 @@ Our styles are based on the excellent [javascript guide from Airbnb](https://git
 ## Naming conventions
 ### Consistency and disambiguation
 
-As soon as a concept has a name, this name should always be used to refer to that concept, and that 
+As soon as a concept has a name, this name should always be used to refer to that concept, and that
 name shouldn't be used to refer to anything else.
 
-Example: 
+Example:
 - A `globalRouteId` is a unique identifier to a route. One should never call it `routeId` since it
  is another concept (used in the GTFS, the tGTFS and the bgtfs with different meaning).
 - A `feed` is an instance of the `transit_production.feeds` table. An `alertFeed` is an instance of
  the `service_update.alert_feeds` table.
- 
-Example: 
-If some external tools/library/api uses the same name for another concept, then at least the 
+
+Example:
+If some external tools/library/api uses the same name for another concept, then at least the
 foreign name should be prefixed for disambiguation, or even both.
+
 - When we match the stops from the GTFS to the stop from some real-time API, we call the first one
  `gtfsStop` and the second one `apiStop` even if the first one is usually just called stop.
 
 
 ### The name should describe the content
-As much as possible:
-- an array of `value` should be called just `values`;
-- an object of `value` index by some `key` should be called `valueByKey`.
 
-As soon as you start to have different representations of the same thing in the same function, 
-disambiguation on the content should be done. For example:
-- `timestampAsMoment` vs `timestampAsString`
-- `stopSequenceAsString` vs `stopSequenceAsInt`
+- An array of `value` should be called just `values`.
+- An object of `value` indexed by some `key` should be called `valueByKey`.
+  ```javascript
+  // Bad.
+  const routes = {
+    2: {
+      shortName: 'Route1',
+      longName: 'Awesome Route 1'
+    },
+  };
+
+  // Good.
+  const gtfsRouteByGlobalRouteId = {
+    2: {
+      shortName: 'Route1',
+      longName: 'Awesome Route 1'
+    },
+  };
+  ```
+
+- When you have different representations of the _same_ thing, apply some disambiguation on the content.
+  ```javascript
+  // Bad.
+  const date = '2017-01-01 00:00:00';
+  const anotherDate = moment().format('YYYY-MM-DD HH:mm:ss');
+
+  // Good.
+  const dateAsString = '2017-01-01 00:00:00';
+  const dateAsMoment = moment().format('YYYY-MM-DD HH:mm:ss');
+  ```
+
+  ```javascript
+  // Bad.
+  const stopSequence = '1';
+  const anotherStopSequence = 2;
+
+  // Good.
+  const stopSequenceAsString = '1';
+  const stopSequenceAsInt = 2;
+  ```
 
 With some reasonable limits, one shouldn't be afraid to have long variable name, and be more afraid
  of meaningless names. For example:
