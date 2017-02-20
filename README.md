@@ -12,19 +12,19 @@ Our styles are based on the excellent [javascript guide from Airbnb](https://git
 
 ### Whitespace
 - Limit your lines to 105 characters. eslint: [max-len](http://eslint.org/docs/rules/max-len).
-> This ensures readability and maintainability.
+ > This ensures readability and maintainability.
 
-```javascript
-// Bad.
-const promise = Promise.resolve(true).then(Promise.resolve).then(Promise.resolve).then(Promise.resolve).then(Promise.resolve);
+  ```javascript
+  // Bad.
+  const promise = Promise.resolve(true).then(Promise.resolve).then(Promise.resolve).then(Promise.resolve).then(Promise.resolve);
 
-// Good
-const promise = Promise.resolve()
-  .then(Promise.resolve)
-  .then(Promise.resolve)
-  .then(Promise.resolve)
-  .then(Promise.resolve);
-```
+  // Good
+  const promise = Promise.resolve()
+    .then(Promise.resolve)
+    .then(Promise.resolve)
+    .then(Promise.resolve)
+    .then(Promise.resolve);
+  ```
 
 ## Naming conventions
 For sure, there are things we'd like to add here.
