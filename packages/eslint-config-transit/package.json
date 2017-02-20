@@ -31,16 +31,6 @@
   "dependencies": {
     "eslint-config-airbnb-base": "^11.1.0"
   },
-  "eslintConfig": {
-    "extends": "airbnb-base",
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "ecmaFeatures": {}
-    },
-    "rules": {
-      "max-len": ["error", 105, 2]
-    }
-  },
   "engines": {
     "node": ">= 4.0.0"
   }
