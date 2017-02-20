@@ -89,11 +89,6 @@ foreign name should be prefixed for disambiguation, or even both.
   const stopSequenceAsInt = parseInt(stopSequenceAsString);
   ```
 
-As soon as you start to have different representations of the same thing in the same function, 
-disambiguation on the content should be done. For example:
-- `timestampAsMoment` vs `timestampAsString`
-- `stopSequenceAsString` vs `stopSequenceAsInt`
-
 With some reasonable limits, one shouldn't be afraid to have long variable name, and be more afraid
  of meaningless names. For example:
 - `apiStopByStopIdByTripHeadsignByRouteId` should be still preferred as `dict` or `apiStops`.
