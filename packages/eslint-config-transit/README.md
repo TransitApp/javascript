@@ -24,3 +24,6 @@ From this point, you should be able to start linting your code:
 
 ## The rules
 They can be found in the [Transit's javascript style guide](https://github.com/TransitApp/javascript).
+
+## Contributing
+If you wish to add a rule, please pull request away and make sure to write a test case that's testing your new linting rule.
