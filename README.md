@@ -48,22 +48,22 @@ foreign name should be prefixed for disambiguation, or even both.
 
 ### The name should describe the content
 
-- An array of `value` should be called just `values`.
-- An object of `value` indexed by some `key` should be called `valueByKey`.
+- An array of `thing` should be called just `things`.
+- An object of `thing` indexed by some `key` should be called `thingByKey`.
   ```javascript
   // Bad.
   const routes = {
     2: {
-      shortName: 'Route1',
-      longName: 'Awesome Route 1'
+      routeShortName: 'R1',
+      routeLongName: 'Awesome Route 1'
     },
   };
 
   // Good.
-  const gtfsRouteByGlobalRouteId = {
+  const routeByGlobalRouteId = {
     2: {
-      shortName: 'Route1',
-      longName: 'Awesome Route 1'
+      routeShortName: 'R1',
+      routeLongName: 'Awesome Route 1'
     },
   };
   ```
@@ -71,23 +71,28 @@ foreign name should be prefixed for disambiguation, or even both.
 - When you have different representations of the _same_ thing, apply some disambiguation on the content.
   ```javascript
   // Bad.
-  const date = '2017-01-01 00:00:00';
-  const anotherDate = moment().format('YYYY-MM-DD HH:mm:ss');
+  let date = '2017-01-01 00:00:00';
+  date = moment(date, 'YYYY-MM-DD HH:mm:ss');
 
   // Good.
   const dateAsString = '2017-01-01 00:00:00';
-  const dateAsMoment = moment().format('YYYY-MM-DD HH:mm:ss');
+  const dateAsMoment = moment(dateAsString, 'YYYY-MM-DD HH:mm:ss');
   ```
 
   ```javascript
   // Bad.
-  const stopSequence = '1';
-  const anotherStopSequence = 2;
+  let stopSequence = '1';
+  stopSequence = parseInt(2);
 
   // Good.
   const stopSequenceAsString = '1';
-  const stopSequenceAsInt = 2;
+  const stopSequenceAsInt = parseInt(stopSequenceAsString);
   ```
+
+As soon as you start to have different representations of the same thing in the same function, 
+disambiguation on the content should be done. For example:
+- `timestampAsMoment` vs `timestampAsString`
+- `stopSequenceAsString` vs `stopSequenceAsInt`
 
 With some reasonable limits, one shouldn't be afraid to have long variable name, and be more afraid
  of meaningless names. For example:
