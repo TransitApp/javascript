@@ -33,3 +33,14 @@ if (reassignParameter) {
 else {
   functionDefinedBeforeUse();
 }
+
+// Trailing comma in function parameters should be ignored
+// It's a ES2017 features and it's not available in any Node JS version.
+function testMyTrailingComma(
+  a,
+  b
+) {
+  return a + b;
+}
+
+testMyTrailingComma();
