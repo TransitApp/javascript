@@ -13,3 +13,23 @@ function testMyStringLikeYouNeverTestedItBefore() {
 }
 
 testMyStringLikeYouNeverTestedItBefore();
+
+// Use function before declaration
+functionDefinedBeforeUse();
+
+function functionDefinedBeforeUse() {
+
+}
+
+// Allowing to reassign parameter
+function reassignParameter(value) {
+  value.key = 42;
+}
+
+// Curly braces with if else
+if (reassignParameter) {
+  reassignParameter();
+}
+else {
+  functionDefinedBeforeUse();
+}
