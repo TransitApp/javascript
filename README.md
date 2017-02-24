@@ -104,13 +104,16 @@ With some reasonable limits, one shouldn't be afraid to have long variable name,
 - `apiStopByStopIdByTripHeadsignByRouteId` should be still preferred as `dict` or `apiStops`.
 
 ## ES2015 and beyond
+Below are features that are recommended to start using. Although, keep in mind that they are closely related to node versions, so please [double check](http://node.green) if a feature is available before starting using it.
 
 ### Promises
-Dealing with asynchronous code can be tricky sometimes. To simplify and improve readability, one must stop using error-first callback based code and opt in to Promises. Here are a few links to understand them and start using them efficiently.
+Dealing with asynchronous code can be tricky sometimes. To simplify and improve readability, one must try using Promises instead of the classic error-first callback. Here are a few links to understand them and start using them efficiently.
 
 - [Promises vs callbacks](promises.md)
 - [Manage your async control flow](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch4.md#chapter-4-async-flow-control)
 
 ### Async/Await
-Async/await is part of the ES2017 release. As of Node 7.6, it's available natively without the `--harmony` flag.
-... to be continued.
+Async/await is part of the ES2017 release. Node 7.6 ships with [V8 5.5](https://v8project.blogspot.ca/2016/10/v8-release-55.html), which includes `async/await` natively. So it's time to start use it. Although, one must completely understand how Promises work because both features work together.
+
+- [Getting started with async/await](https://medium.freecodecamp.com/getting-started-with-async-await-b66385983875#.qxl22gdiv)
+- [Understanding Promises before using async/await](https://medium.com/@bluepnume/learn-about-promises-before-you-start-using-async-await-eb148164a9c8#.39oi14ego)

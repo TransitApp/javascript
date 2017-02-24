@@ -4,7 +4,7 @@
 A Promise is an object that's representing a potential future value, we just don't know what it will be _yet_.
 When you have a Promise in hands, it promises you to get you a value back or an error.
 
-## Promises vs callbacks.
+## Promises vs callbacks
 Two things are important to note why Promises are a more suitable solutions for asynchronous programming than callbacks.
 
 The first thing is the inversion of inversion of control. Or simply put: restoring control to the calling code.
@@ -131,7 +131,7 @@ Promise.resolve(true)
   .catch(error => console.error('This is never called')) // Never called because we already handled the error before.
 ```
 
-## All about `then` and how to use it efficiently.
+## All about `then` and how to use it efficiently
 As we said earlier, Promises are "thenables", so they have a `then` method on them.
 This is a very powerful function because anything you return from a `then` function is converted to a Promise (If not already one) that will resolve in whatever you're returning.
 
@@ -183,6 +183,6 @@ getPromise()
     // Will only be called after 4 seconds.
 });
 ```
-## Ressources
+## Resources
 
 - [MDN Promises](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise)
