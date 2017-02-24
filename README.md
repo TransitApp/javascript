@@ -4,6 +4,8 @@ _Javascript style guide we use at [Transit](https://transitapp.com/)._
 ## Content
 - [Airbnb Javascript style guide](#airbnb-javascript-style-guide)
 - [Exceptions](#exceptions)
+- [Naming conventions](#naming-conventions)
+- [ES2015 and beyond](#es2015-and-beyond)
 
 ## Airbnb Javascript style guide
 Our styles are based on the excellent [javascript guide from Airbnb](https://github.com/airbnb/javascript) with a few exceptions.
@@ -100,3 +102,15 @@ foreign name should be prefixed for disambiguation, or even both.
 With some reasonable limits, one shouldn't be afraid to have long variable name, and be more afraid
  of meaningless names. For example:
 - `apiStopByStopIdByTripHeadsignByRouteId` should be still preferred as `dict` or `apiStops`.
+
+## ES2015 and beyond
+
+### Promises
+Dealing with asynchronous code can be tricky sometimes. To simplify and improve readability, one must stop using error-first callback based code and opt in to Promises. Here are a few links to understand them and start using them efficiently.
+
+- [Promises vs callbacks](promises.md)
+- [Manage your async control flow](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch4.md#chapter-4-async-flow-control)
+
+### Async/Await
+Async/await is part of the ES2017 release. As of Node 7.6, it's available natively without the `--harmony` flag.
+... to be continued.
