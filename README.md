@@ -13,7 +13,7 @@ Our styles are based on the excellent [javascript guide from Airbnb](https://git
 ## Exceptions
 
 ### Whitespace
-- Limit your lines to 100 characters (with a 5 characters tolerance). eslint: [max-len](http://eslint.org/docs/rules/max-len).
+- Limit your lines to 120 characters. eslint: [max-len](http://eslint.org/docs/rules/max-len).
  > This ensures readability and maintainability.
 
   ```javascript
@@ -26,6 +26,15 @@ Our styles are based on the excellent [javascript guide from Airbnb](https://git
     .then(Promise.resolve)
     .then(Promise.resolve)
     .then(Promise.resolve);
+  ```
+
+### Functions
+- Allow usage before declaration. eslint: [no-use-before-define](http://eslint.org/docs/rules/no-use-before-define)
+
+  ```javascript
+  doSomething();
+
+  function doSomething() {}
   ```
 
 ## Naming conventions
