@@ -24,16 +24,16 @@ function functionDefinedBeforeUse() {
   // Quotes in object properties
   // If one property needs quotes, then we'll require quotes on any properties for the same object.
   const obj = {
-    'foo word': 'bar',
-    'other foo': 'bar2',
-    'foo': 'bar',
+    fooword: 'bar',
+    otherfoo: 'bar2',
+    foo: 'bar',
   };
 
   // If none of them require quotes, then quotes are disallowed.
   const anotherObject = Object.assign({}, obj, {
-    foo: 'bar',
-    foo2: 'bar2',
-    foo3: 'bar3',
+    'foo': 'bar',
+    'foo2': 'bar2',
+    'foo 3': 'bar3',
   });
 
   return anotherObject;

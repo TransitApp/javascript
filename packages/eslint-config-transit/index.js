@@ -12,7 +12,7 @@ module.exports = {
     'no-use-before-define': 'off',
     'radix': 'off',
     'max-len': ['error', 120, 2],
-    'quote-props': ['error', 'consistent-as-needed'],
+    'quote-props': ['error', 'consistent'],
     'no-restricted-syntax': [
       'error',
       'ForInStatement',
