@@ -66,3 +66,10 @@ testMyTrailingComma();
 for (const item of [() => {}, () => {}, () => {}]) {
   item();
 }
+
+// Allow continue
+for (const item of [() => {}, () => 1, () => {}]) {
+  if (item() === 1) {
+    continue;
+  }
+}
