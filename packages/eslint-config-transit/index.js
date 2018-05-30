@@ -27,5 +27,6 @@ module.exports = {
       exports: 'always-multiline',
       functions: 'ignore',
     }],
+    'class-methods-use-this': 'off',
   },
 };
