@@ -8,6 +8,7 @@ module.exports = {
     sourceType: 'script',
   },
   rules: {
+    'no-await-in-loop': 'off',
     'no-param-reassign': 'off',
     'no-use-before-define': 'off',
     'no-continue': 'off',
