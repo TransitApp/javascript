@@ -28,6 +28,10 @@ module.exports = {
       exports: 'always-multiline',
       functions: 'ignore',
     }],
+    'no-underscore-dangle': ['error',{
+      'allowAfterThis': true,
+      'allowAfterSuper': true,
+    }],
     'class-methods-use-this': 'off',
   },
 };
