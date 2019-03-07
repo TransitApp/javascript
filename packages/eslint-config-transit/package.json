@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-transit",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Transit's ESLint config",
   "main": "index.js",
   "scripts": {
@@ -29,11 +29,11 @@
     "eslint": "^5.2.0"
   },
   "devDependencies": {
-    "eslint": "^5.2.0",
-    "eslint-plugin-import": "^2.13.0"
+    "eslint": "^5.15.1",
+    "eslint-plugin-import": "^2.16.0"
   },
   "dependencies": {
-    "eslint-config-airbnb-base": "^11.1.0"
+    "eslint-config-airbnb-base": "^13.1.0"
   },
   "engines": {
     "node": ">= 4.0.0"

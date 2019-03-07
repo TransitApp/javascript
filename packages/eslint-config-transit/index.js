@@ -28,7 +28,7 @@ module.exports = {
       exports: 'always-multiline',
       functions: 'ignore',
     }],
-    'no-underscore-dangle': ['error',{
+    'no-underscore-dangle': ['error', {
       'allowAfterThis': true,
       'allowAfterSuper': true,
     }],
