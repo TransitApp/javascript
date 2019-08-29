@@ -1,5 +1,3 @@
-'use strict';
-
 // Limit your lines to 120 characters
 testMyStringLikeYouNeverTestedItBefore();
 
@@ -30,11 +28,12 @@ function functionDefinedBeforeUse() {
   };
 
   // If none of them require quotes, then quotes are disallowed.
-  const anotherObject = Object.assign({}, obj, {
+  const anotherObject = {
+    ...obj,
     'foo': 'bar',
     'foo2': 'bar2',
     'foo 3': 'bar3',
-  });
+  };
 
   return anotherObject;
 }
