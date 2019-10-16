@@ -3,7 +3,7 @@
 module.exports = {
   extends: 'airbnb-base',
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2019,
     ecmaFeatures: {},
     sourceType: 'script',
   },
@@ -33,5 +33,7 @@ module.exports = {
       'allowAfterSuper': true,
     }],
     'class-methods-use-this': 'off',
+    // Allowing use strict since airbnb disallows it
+    'strict': ['error', 'global'],
   },
 };
