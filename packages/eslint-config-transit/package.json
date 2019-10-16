@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-transit",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Transit's ESLint config",
   "main": "index.js",
   "scripts": {

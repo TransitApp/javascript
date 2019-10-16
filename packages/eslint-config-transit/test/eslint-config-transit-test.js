@@ -1,3 +1,5 @@
+'use strict';
+
 // Limit your lines to 120 characters
 testMyStringLikeYouNeverTestedItBefore();
 
