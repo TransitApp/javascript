@@ -12,6 +12,7 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-use-before-define': 'off',
     'no-continue': 'off',
+    'no-undef': 'error',
     'radix': 'off',
     'max-len': ['error', 120, 2],
     'quote-props': ['error', 'consistent'],
