@@ -8,6 +8,8 @@ Start with one sentence explaining what the repository does. Avoid mentioning th
 
 Describe the development environment. Include basic instructions--does this repository prefer `npm ci` or `npm i`? Does prettier run on save? Any special settings or extensions you should set up in your IDE?
 
+Include any environment variables or configuration required.
+
 If you're not sure where to start, consider explaining the npm scripts that might be relevent for getting a development environment
 
 ## Dependencies
